@@ -33,6 +33,44 @@ $ gem install qml -- --with-qmake=$(brew --prefix qt5)/bin/qmake
 $ ruby hello.rb
 ```
 
+## PACKAGING
+
+jRuby + rawrを使って.exe|.appファイルを生成する。
+
+### jRubyの環境構築
+
+```
+$ brew install jruby
+```
+
+### rawrのインストール
+
+```
+$ gem install rawr --source http://gems.neurogami.com
+$ rbenv rehash
+$ rawr install
+```
+
+### lib/rubyに必要なgemをインストール
+
+```
+$ bundle config build.qml --with-qmake=$(brew --prefix qt5)/bin/qmake
+$ bundle install --path lib/ruby
+```
+
+### 実行ファイルの設定
+
+build_configuration.rbに以下の設定を記述(コメントアウト解除)
+
+```
+configuration do |c|
+	c.executable_type = "gui"
+
+  # 実行ファイルのファイル名を記述
+	c.main_ruby_file = "hello"
+end
+```
+
 ## REFERENCES
 
 ruby-qmlの製作者さん？のQiita記事
