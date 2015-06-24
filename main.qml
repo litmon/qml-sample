@@ -10,5 +10,10 @@ ApplicationWindow {
   Label {
     id: textField  
     text: "Hello, ruby-qml!"
+    anchors.top: parent.top
+    anchors.left: parent.left
+
+    anchors.topMargin: 20
+    anchors.leftMargin: 20
   }
 }
