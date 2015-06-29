@@ -39,4 +39,8 @@ ruby-qmlの製作者さん？のQiita記事
 
 [RubyとQML/Qt Quickでデスクトップ用GUIアプリを書けるgem「ruby-qml」を作った](http://qiita.com/seanchas_t/items/ec8b5376b80eee22ea15)
 
+## やりたかったこと
 
+パッケージ化(exe, app)したかった。(jRubyがC-Extensionに未対応だった)
+
+jRubyFXでも触るか……
